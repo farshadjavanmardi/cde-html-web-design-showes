@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <style>
+            body
+        
+        #container
+             {
+  display: grid;
+ 
+  grid-template-areas:
+    "header header header header header"
+    "empty_left middle content middle-1 empty_right"
+    
+    "footer footer footer footer footer";
+    
+  
+  grid-template-rows: 0fr 1fr  0fr;
+ 
+  grid-template-columns: 1fr 960px 500px 960px 1fr;
+
+  
+
+
+  min-height: 100vh;
+}
+#header {
+  grid-area: header;
+
+  
+  position: sticky;
+  top: 0;
+  
+  z-index: 1;
+
+ 
+  background-color: #0c8008;
+  text-align: center;
+ 
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+:root {
+  --header-height: calc(1rem * 1.5 + 1rem * 2);
+}
+
+#middle {
+  grid-area: middle ;
+}
+#middle-1 {
+  grid-area: middle-1;
+}
+#middle,
+#middle-1 {
+  display: flex;
+  flex-direction: column-reverse;
+  position: sticky;
+ top: 0px;
+
+  
+  background-color: #1ecc18;
+}
+#content
+{
+    grid-area:content;
+}
+
+#footer {
+  grid-area: footer;
+
+  
+  position: sticky;
+  bottom: 0;
+
+ 
+  background-color: #0c8008;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.5;
+  padding: .5rem;
+}
+
+:root {
+  --footer-height: calc(.8rem * 1.5 + .5rem * 2);
+}
+
+#sec1 {
+  flex-grow: 1;
+}
+#sec2 {
+  position: sticky;
+  bottom: var(--footer-height);
+  min-height: calc(100vh - var(--footer-height));
+  box-sizing: border-box;
+
+  --padding: 10px;
+  padding:
+    calc(var(--header-height) + var(--padding))
+    var(--padding)
+    var(--padding);
+  margin-top: calc(0px - var(--header-height));
+}
+           
+        </style>
+        </head>
+        
+           
+        <body style="background-color: #1ecc18;text-emphasis-color:#35ff2e;">
+            <section id="container">
+                <section id="header"><h1><u><b><i>HEADER</i></b></u></h1>
+                </section>
+                
+                <section id="middle">
+                    <div id="sec1"></div>
+  <div id="content"></div>
+                </section>
+                <section id="content"></section>
+                    <section id="middle-1"><h2><u><b><i></i></b></u></h2></section>
+                
+                    <section id="footer"><h3><u><b><i>FOOTER</i></b></u></h3>
+                    </section>
+            
+                    
+                </body>
+                <body >
+
+                  
+                </body>>
+                   
+                </body>
+                
+                
+            
+</html>
